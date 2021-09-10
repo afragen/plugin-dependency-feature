@@ -1,0 +1,38 @@
+{
+    "name": "afragen/plugin-dependency-feature",
+    "description": "Testing plugin dependencies in a feature plugin.",
+    "type": "wordpress-plugin",
+    "keywords": [
+        "wordpress",
+        "development",
+        "plugin"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andy Fragen",
+            "email": "andy@thefragens.com",
+            "homepage": "https://thefragens.com",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/afragen/plugin-dependency-feature"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/afragen/plugin-dependency-feature/issues",
+        "source": "https://github.com/afragen/plugin-dependency-feature"
+    },
+    "prefer-stable": true,
+    "require": {
+        "afragen/wp-dependency-installer": "dev-feature-plugin"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "wp i18n make-pot . languages/plugin-dependency-feature.pot"
+        ]
+    }
+}

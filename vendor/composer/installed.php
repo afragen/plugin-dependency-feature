@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'type' => 'wordpress-plugin',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => NULL,
+        'name' => 'afragen/group-plugin-installer',
+        'dev' => false,
+    ),
+    'versions' => array(
+        'afragen/group-plugin-installer' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'type' => 'wordpress-plugin',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => NULL,
+            'dev_requirement' => false,
+        ),
+        'afragen/wp-dependency-installer' => array(
+            'pretty_version' => '3.1.0',
+            'version' => '3.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../afragen/wp-dependency-installer',
+            'aliases' => array(),
+            'reference' => '65570a1eb966bb9adfc9d9e521357da080fbdc5a',
+            'dev_requirement' => false,
+        ),
+        'collizo4sky/persist-admin-notices-dismissal' => array(
+            'pretty_version' => '1.4.4',
+            'version' => '1.4.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../collizo4sky/persist-admin-notices-dismissal',
+            'aliases' => array(),
+            'reference' => '900739eb6b0ec0210465f5983a6d4e0e420289e4',
+            'dev_requirement' => false,
+        ),
+    ),
+);
