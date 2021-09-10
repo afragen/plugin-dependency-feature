@@ -1,31 +1,31 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
-        'name' => 'afragen/group-plugin-installer',
+        'reference' => 'daf1c7b3ae7ee5457f04af9c3a78f1da2d5a7375',
+        'name' => 'afragen/plugin-dependency-feature',
         'dev' => false,
     ),
     'versions' => array(
-        'afragen/group-plugin-installer' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+        'afragen/plugin-dependency-feature' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'daf1c7b3ae7ee5457f04af9c3a78f1da2d5a7375',
             'dev_requirement' => false,
         ),
         'afragen/wp-dependency-installer' => array(
-            'pretty_version' => '3.1.0',
-            'version' => '3.1.0.0',
+            'pretty_version' => 'dev-feature-plugin',
+            'version' => 'dev-feature-plugin',
             'type' => 'library',
             'install_path' => __DIR__ . '/../afragen/wp-dependency-installer',
             'aliases' => array(),
-            'reference' => '65570a1eb966bb9adfc9d9e521357da080fbdc5a',
+            'reference' => '9920199cb916d15f123414c362eb19d08acbdca9',
             'dev_requirement' => false,
         ),
         'collizo4sky/persist-admin-notices-dismissal' => array(

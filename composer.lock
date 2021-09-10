@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "490d85d7493b2780b5731bebb99c89ee",
+    "content-hash": "14636b878dc5daef6b0040c3f3be0191",
     "packages": [
         {
             "name": "afragen/wp-dependency-installer",
-            "version": "3.1.0",
+            "version": "dev-feature-plugin",
             "source": {
                 "type": "git",
                 "url": "https://github.com/afragen/wp-dependency-installer.git",
-                "reference": "65570a1eb966bb9adfc9d9e521357da080fbdc5a"
+                "reference": "9920199cb916d15f123414c362eb19d08acbdca9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/afragen/wp-dependency-installer/zipball/65570a1eb966bb9adfc9d9e521357da080fbdc5a",
-                "reference": "65570a1eb966bb9adfc9d9e521357da080fbdc5a",
+                "url": "https://api.github.com/repos/afragen/wp-dependency-installer/zipball/9920199cb916d15f123414c362eb19d08acbdca9",
+                "reference": "9920199cb916d15f123414c362eb19d08acbdca9",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +57,13 @@
                 "issues": "https://github.com/afragen/wp-dependency-installer/issues",
                 "source": "https://github.com/afragen/wp-dependency-installer"
             },
-            "time": "2020-11-10T23:03:42+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/afragen",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-09-09T23:41:48+00:00"
         },
         {
             "name": "collizo4sky/persist-admin-notices-dismissal",
@@ -104,7 +110,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "afragen/wp-dependency-installer": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
