@@ -2,7 +2,7 @@
 
  * Plugin Name: Plugin Dependency Feature
  * Plugin URI: https://github.com/afragen/plugin-dependency-feature
- * Description: Allows you to easily add a group of plugins to a WordPress installation.
+ * Description: Testing WordPress plugin dependencies.
  * Author: Andy Fragen
  * License: MIT
  * Requires WP: 5.1
