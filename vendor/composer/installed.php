@@ -5,7 +5,7 @@
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'daf1c7b3ae7ee5457f04af9c3a78f1da2d5a7375',
+        'reference' => '5a170c48f5973a7d898d5a3586fbd6fb1c986aaa',
         'name' => 'afragen/plugin-dependency-feature',
         'dev' => false,
     ),
@@ -16,7 +16,7 @@
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'daf1c7b3ae7ee5457f04af9c3a78f1da2d5a7375',
+            'reference' => '5a170c48f5973a7d898d5a3586fbd6fb1c986aaa',
             'dev_requirement' => false,
         ),
         'afragen/wp-dependency-installer' => array(

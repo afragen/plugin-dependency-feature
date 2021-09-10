@@ -36,16 +36,6 @@ add_filter(
 	2
 );
 
-//add_filter(
-//	'wp_dependency_dismiss_label',
-//	function( $label, $source ) {
-//		$label = basename( __DIR__ ) !== $source ? $label : __( 'Plugin Dependency //Feature', 'plugin-dependency-feature' );
-//		return $label;
-//	},
-//	10,
-//	2
-//);
-
 // Sanity check for WPDI v3.0.0.
 if ( ! method_exists( 'WP_Dependency_Installer', 'json_file_decode' ) ) {
 	add_action(
