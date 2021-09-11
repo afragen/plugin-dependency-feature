@@ -13,7 +13,7 @@
  * Plugin URI: https://github.com/afragen/plugin-dependency-feature
  * Description: Testing WordPress plugin dependencies.
  * Author: Andy Fragen
- * Version: 0.1.0
+ * Version: 0.2.0
  * License: MIT
  * Domain Path: /languages
  * Text Domain: plugin-dependency-feature
@@ -23,8 +23,20 @@
  * GitHub Plugin URI: afragen/plugin-dependency-feature
  */
 
-require_once __DIR__ . '/vendor/autoload.php';
-WP_Dependency_Installer::instance( __DIR__ )->run();
+namespace Fragen\Plugin_Dependency_Feature;
+
+require_once __DIR__ . '/wp-admin/includes/class-wp-plugin-dependency-installer.php';
+( new \WP_Plugin_Dependency_Installer( __DIR__ ) )->run();
+
+$config = array(
+	array(
+		'name'     => 'Hello Dolly',
+		'slug'     => 'hello-dolly/hello.php',
+		'uri'      => 'https://wordpress.org/plugins/hello-dolly',
+		'required' => true,
+	),
+);
+// ( new \WP_Plugin_Dependency_Installer( __DIR__ ) )->register( $config )->run();
 
 add_filter(
 	'wp_dependency_timeout',
@@ -35,19 +47,3 @@ add_filter(
 	10,
 	2
 );
-
-// Sanity check for WPDI v3.0.0.
-if ( ! method_exists( 'WP_Dependency_Installer', 'json_file_decode' ) ) {
-	add_action(
-		'admin_notices',
-		function() {
-			$class   = 'notice notice-error is-dismissible';
-			$label   = __( 'Plugin Dependency Feature', 'plugin-dependency-feature' );
-			$file    = ( new ReflectionClass( 'WP_Dependency_Installer' ) )->getFilename();
-			$message = __( 'Another theme or plugin is using a previous version of the WP Dependency Installer library, please update this file and try again:', 'plugin-dependency-feature' );
-			printf( '<div class="%1$s"><p><strong>[%2$s]</strong> %3$s</p><pre>%4$s</pre></div>', esc_attr( $class ), esc_html( $label ), esc_html( $message ), esc_html( $file ) );
-		},
-		1
-	);
-	return false; // Exit early.
-}
