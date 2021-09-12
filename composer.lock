@@ -4,115 +4,12 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "14636b878dc5daef6b0040c3f3be0191",
-    "packages": [
-        {
-            "name": "afragen/wp-dependency-installer",
-            "version": "dev-feature-plugin",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/afragen/wp-dependency-installer.git",
-                "reference": "9920199cb916d15f123414c362eb19d08acbdca9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/afragen/wp-dependency-installer/zipball/9920199cb916d15f123414c362eb19d08acbdca9",
-                "reference": "9920199cb916d15f123414c362eb19d08acbdca9",
-                "shasum": ""
-            },
-            "require": {
-                "collizo4sky/persist-admin-notices-dismissal": "^1",
-                "php": ">=5.6"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "wp-dependency-installer.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andy Fragen",
-                    "email": "andy@thefragens.com",
-                    "homepage": "https://thefragens.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Matt Gibbs",
-                    "homepage": "https://facetwp.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Raruto",
-                    "homepage": "https://raruto.github.io",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Library that helps WordPress plugin dependency management.",
-            "support": {
-                "issues": "https://github.com/afragen/wp-dependency-installer/issues",
-                "source": "https://github.com/afragen/wp-dependency-installer"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/afragen",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-09-09T23:41:48+00:00"
-        },
-        {
-            "name": "collizo4sky/persist-admin-notices-dismissal",
-            "version": "1.4.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/w3guy/persist-admin-notices-dismissal.git",
-                "reference": "900739eb6b0ec0210465f5983a6d4e0e420289e4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/w3guy/persist-admin-notices-dismissal/zipball/900739eb6b0ec0210465f5983a6d4e0e420289e4",
-                "reference": "900739eb6b0ec0210465f5983a6d4e0e420289e4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "persist-admin-notices-dismissal.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Collins Agbonghama",
-                    "email": "me@w3guy.com",
-                    "role": "developer"
-                }
-            ],
-            "description": "Simple library to persist dismissal of admin notices across pages in WordPress dashboard.",
-            "support": {
-                "issues": "https://github.com/w3guy/persist-admin-notices-dismissal/issues",
-                "source": "https://github.com/w3guy/persist-admin-notices-dismissal"
-            },
-            "time": "2020-12-31T17:12:37+00:00"
-        }
-    ],
+    "content-hash": "55a40b07f49722372fd399a2bc1c5d3d",
+    "packages": [],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "afragen/wp-dependency-installer": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

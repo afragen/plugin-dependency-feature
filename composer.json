@@ -26,13 +26,5 @@
         "issues": "https://github.com/afragen/plugin-dependency-feature/issues",
         "source": "https://github.com/afragen/plugin-dependency-feature"
     },
-    "prefer-stable": true,
-    "require": {
-        "afragen/wp-dependency-installer": "dev-feature-plugin"
-    },
-    "scripts": {
-        "post-update-cmd": [
-            "wp i18n make-pot . languages/plugin-dependency-feature.pot"
-        ]
-    }
+    "prefer-stable": true
 }
