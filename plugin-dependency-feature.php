@@ -26,7 +26,6 @@
 namespace Fragen\Plugin_Dependency_Feature;
 
 require_once __DIR__ . '/wp-admin/includes/class-wp-plugin-dependency-installer.php';
-( new \WP_Plugin_Dependency_Installer( __DIR__ ) )->run();
 
 $config = array(
 	array(
@@ -36,8 +35,14 @@ $config = array(
 		'required' => true,
 	),
 );
-// ( new \WP_Plugin_Dependency_Installer( __DIR__ ) )->register( $config )->run();
 
+// If only using JSON config.
+// ( new \WP_Plugin_Dependency_Installer( __DIR__ ) )->run();
+
+// If using JSON config and/or configuration array.
+( new \WP_Plugin_Dependency_Installer( __DIR__ ) )->register( $config )->run();
+
+// Use this filter to adjust the timeout for the dismissal. Default is 7 days.
 add_filter(
 	'wp_dependency_timeout',
 	function( $timeout, $source ) {

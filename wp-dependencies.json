@@ -16,11 +16,5 @@
     "slug": "local-development/local-development.php",
     "uri": "https://wordpress.org/plugins/local-development/",
     "required": false
-  },
-  {
-    "name": "Hello Dolly",
-    "slug": "hello-dolly/hello.php",
-    "uri": "https://wordpress.org/plugins/hello-dolly",
-    "required": true
   }
 ]
