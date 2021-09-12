@@ -1,11 +1,16 @@
 <?php
+/**
+ * Dependencies manager for plugins.
+ *
+ * @package dependencies-manager.
+ * @since 1.0
+ */
 
 /**
- * Exit if called directly.
+ * Plugins dependencies manager.
+ *
+ * @since 1.0.0
  */
-if ( ! defined( 'WPINC' ) ) {
-	die;
-}
 
 /**
  * Class WP_Plugin_Dependency_Installer
@@ -341,7 +346,7 @@ class WP_Plugin_Dependency_Installer {
 			return false;
 		}
 
-		require_once 'class-wp-plugin-dependency-installer-skin.php';
+		require_once 'class-plugin-dependency-installer-skin.php';
 
 		$skin     = new WP_Plugin_Dependency_Installer_Skin(
 			array(
