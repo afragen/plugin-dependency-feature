@@ -1,3 +1,9 @@
+/**
+ * @output wp-admin/js/dismiss-notice.js
+ *
+ * @since 5.9.0
+ */
+
 (function ($) {
 	//shorthand for ready event.
 	$(
