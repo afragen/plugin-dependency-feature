@@ -26,7 +26,7 @@
 namespace Fragen\Plugin_Dependency_Feature;
 
 // Uncomment if patch has been applied.
-require_once \ABSPATH . 'wp-admin/includes/class-wp-plugin-dependency-installer.php';
+//require_once \ABSPATH . 'wp-admin/includes/class-wp-plugin-dependency-installer.php';
 
 // Use if patch has not been applied.
 require_once __DIR__ . '/wp-admin/includes/class-wp-plugin-dependency-installer.php';
