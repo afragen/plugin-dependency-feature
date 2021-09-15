@@ -52,6 +52,31 @@
  *
  * If using JSON config and/or configuration array.
  * \WP_Plugin_Dependency_Installer::instance( __DIR__ )->register( $config )->run();
+ *
+ * Admin notice format.
+ * You must add `dependency-installer` as well as `data-dismissible='dependency-installer-<plugin basename>-<timeout>'`
+ * to the admin notice div class. <timeout> values are from one day '1' to 'forever'. Default timeout is 14 days.
+ *
+ * Example using Query Monitor with a 14 day dismissible notice.
+ * <div class="notice-warning notice is-dismissible dependency-installer" data-dismissible="dependency-installer-query-monitor-14">...</div>
+ *
+ * Example filter to adjust timeout.
+ * Use this filter to adjust the timeout for the dismissal. Default is 14 days.
+ * This example filter can be used to modify the default timeout.
+ * The example filter will change the default timout for all plugin dependencies.
+ * You can specify the exact plugin timeout by modifying the following line in the filter.
+ *
+ * $timeout = 'query-monitor' !== $source ? $timeout : 30;
+ *
+ * add_filter(
+ *  'wp_plugin_dependency_timeout',
+ *  function( $timeout, $source ) {
+ *      $timeout = basename( __DIR__ ) !== $source ? $timeout : 30;
+ *      return $timeout;
+ *  },
+ *  10,
+ *  2
+ * );
  */
 class WP_Plugin_Dependency_Installer {
 	/**
