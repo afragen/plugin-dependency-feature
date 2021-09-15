@@ -4,16 +4,54 @@
  *
  * @package dependencies-manager.
  * @since 1.0
- */
-
-/**
- * Plugins dependencies manager.
  *
- * @since 1.0.0
+ * @see https://github.com/afragen/wp-dependency-installer
  */
 
 /**
  * Class WP_Plugin_Dependency_Installer
+ *
+ * Configuration
+ * Use either a JSON file named `wp-dependencies.json` that is located in your plugin
+ * or theme root, or an associative array.
+ *
+ * Example: JSON file
+ * [
+ *  {
+ *    "name": "Query Monitor",
+ *    "slug": "query-monitor/query-monitor.php",
+ *    "uri": "https://wordpress.org/plugins/query-monitor/",
+ *    "required": false
+ *  },
+ *  {
+ *    "name": "WooCommerce",
+ *    "slug": "woocommerce/woocommerce.php",
+ *    "uri": "https://wordpress.org/plugins/woocommerce/",
+ *    "required": true
+ *  }
+ * ]
+ *
+ * Example associative array
+ * $config = array(
+ *  array(
+ *      'name'     => 'Hello Dolly',
+ *      'slug'     => 'hello-dolly/hello.php',
+ *      'uri'      => 'https://wordpress.org/plugins/hello-dolly',
+ *      'required' => true,
+ *  ),
+ * );
+ *
+ * Initialize: The command to initialize is as follows.
+ *
+ * Load the class.
+ * require_once ABSPATH . 'wp-admin/includes/class-wp-plugin-dependency-installer.php';
+ *
+ * Load the configuration and run.
+ * If only using JSON config.
+ * \WP_Plugin_Dependency_Installer::instance(__DIR__)->run();
+ *
+ * If using JSON config and/or configuration array.
+ * \WP_Plugin_Dependency_Installer::instance( __DIR__ )->register( $config )->run();
  */
 class WP_Plugin_Dependency_Installer {
 	/**
