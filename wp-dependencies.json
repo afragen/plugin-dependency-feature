@@ -16,5 +16,11 @@
     "slug": "local-development/local-development.php",
     "uri": "https://wordpress.org/plugins/local-development/",
     "required": false
+  },
+  {
+    "name": "WooCommerce",
+    "slug": "woocommerce/woocommerce.php",
+    "uri": "https://wordpress.org/plugins/woocommerce/",
+    "required": true
   }
 ]
