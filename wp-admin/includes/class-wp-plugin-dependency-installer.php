@@ -564,11 +564,11 @@ class WP_Plugin_Dependency_Installer {
 				 *
 				 * @since 1.4.1
 				 *
-				 * @param string|int '7'           Default dismissal in days.
+				 * @param string|int '14'               Default dismissal in days.
 				 * @param  string     $notice['source'] Plugin slug of calling plugin.
 				 * @return string|int Dismissal timeout in days.
 				 */
-				$timeout     = apply_filters( 'wp_dependency_timeout', '7', $source );
+				$timeout     = apply_filters( 'wp_plugin_dependency_timeout', '14', $source );
 				$dependency  = dirname( $notice['slug'] );
 				$dismissible = empty( $timeout ) ? '' : sprintf( 'dependency-installer-%1$s-%2$s', esc_attr( $dependency ), esc_attr( $timeout ) );
 			}
