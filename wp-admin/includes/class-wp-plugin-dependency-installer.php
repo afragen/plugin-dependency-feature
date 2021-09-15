@@ -452,8 +452,9 @@ class WP_Plugin_Dependency_Installer {
 	 * @return array Admin notice.
 	 */
 	public function install_notice( $slug ) {
-		$dependency = $this->config[ $slug ];
-		if ( $this->is_required( $dependency ) ) {
+		$dependency  = $this->config[ $slug ];
+		$is_required = $this->is_required( $dependency );
+		if ( $is_required ) {
 			/* translators: %s: Plugin name */
 			$message = sprintf( __( 'The %1$s plugin is required.' ), $dependency['name'] );
 		} else {
@@ -463,6 +464,7 @@ class WP_Plugin_Dependency_Installer {
 
 		return array(
 			'action'  => 'install',
+			'status'  => $is_required ? 'notice-warning' : 'notice-info',
 			'slug'    => $slug,
 			'message' => esc_attr( $message ),
 			'source'  => $dependency['source'],
