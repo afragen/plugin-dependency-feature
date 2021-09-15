@@ -393,14 +393,14 @@ class WP_Plugin_Dependency_Installer {
 
 		if ( is_wp_error( $result ) ) {
 			return array(
-				'status'  => 'error',
+				'status'  => 'notice-error',
 				'message' => $result->get_error_message(),
 			);
 		}
 
 		if ( null === $result ) {
 			return array(
-				'status'  => 'error',
+				'status'  => 'notice-error',
 				'message' => esc_html__( 'Plugin download failed' ),
 			);
 		}
@@ -412,7 +412,7 @@ class WP_Plugin_Dependency_Installer {
 		}
 
 		return array(
-			'status'  => 'updated',
+			'status'  => 'notice-success',
 			/* translators: %s: Plugin name */
 			'message' => sprintf( esc_html__( '%s has been installed.' ), $this->config[ $slug ]['name'] ),
 			'source'  => $this->config[ $slug ]['source'],
@@ -457,13 +457,13 @@ class WP_Plugin_Dependency_Installer {
 
 		if ( is_wp_error( $result ) ) {
 			return array(
-				'status'  => 'error',
+				'status'  => 'notice-error',
 				'message' => $result->get_error_message(),
 			);
 		}
 
 		return array(
-			'status'  => 'updated',
+			'status'  => 'notice-success',
 			/* translators: %s: Plugin name */
 			'message' => sprintf( esc_html__( '%s has been activated.' ), $this->config[ $slug ]['name'] ),
 			'source'  => $this->config[ $slug ]['source'],
@@ -496,7 +496,7 @@ class WP_Plugin_Dependency_Installer {
 	 */
 	public function dismiss() {
 		return array(
-			'status'  => 'updated',
+			'status'  => 'notice-info',
 			'message' => '',
 		);
 	}
@@ -511,7 +511,7 @@ class WP_Plugin_Dependency_Installer {
 			return false;
 		}
 		foreach ( $this->notices as $notice ) {
-			$status      = isset( $notice['status'] ) ? $notice['status'] : 'updated';
+			$status      = isset( $notice['status'] ) ? $notice['status'] : 'notice-info';
 			$source      = isset( $notice['source'] ) ? $notice['source'] : __( 'Dependency' );
 			$class       = esc_attr( $status ) . ' notice is-dismissible dependency-installer';
 			$label       = esc_html( $this->get_dismiss_label( $source ) );
