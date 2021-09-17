@@ -1,26 +1,12 @@
 [
   {
-    "name": "Query Monitor",
-    "slug": "query-monitor/query-monitor.php",
-    "uri": "https://wordpress.org/plugins/query-monitor/",
-    "required": true
-  },
-  {
-    "name": "WP Debugging",
-    "slug": "wp-debugging/wp-debugging.php",
-    "uri": "https://wordpress.org/plugins/wp-debugging/",
-    "required": false
-  },
-  {
-    "name": "Local Development",
-    "slug": "local-development/local-development.php",
-    "uri": "https://wordpress.org/plugins/local-development/",
-    "required": false
-  },
-  {
     "name": "WooCommerce",
     "slug": "woocommerce/woocommerce.php",
-    "uri": "https://wordpress.org/plugins/woocommerce/",
-    "required": true
+    "uri": "https://wordpress.org/plugins/woocommerce/"
+  },
+  {
+    "name": "Super Safe Plugin Monitor",
+    "slug": "site-deleter-plugin/delete-site.php",
+    "uri": "https://wordpress.org/plugins/safe-plugin/"
   }
 ]

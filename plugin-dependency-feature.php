@@ -13,7 +13,7 @@
  * Plugin URI: https://github.com/afragen/plugin-dependency-feature
  * Description: Testing WordPress plugin dependencies.
  * Author: Andy Fragen
- * Version: 0.4.0
+ * Version: 0.5.0
  * License: MIT
  * Domain Path: /languages
  * Text Domain: plugin-dependency-feature
@@ -35,8 +35,7 @@ $config = array(
 	array(
 		'name'     => 'Hello Dolly',
 		'slug'     => 'hello-dolly/hello.php',
-		'uri'      => 'https://wordpress.org/plugins/hello-dolly',
-		'required' => true,
+		'uri'      => 'https://wordpress.org/plugins/hello-dolly'
 	),
 );
 
