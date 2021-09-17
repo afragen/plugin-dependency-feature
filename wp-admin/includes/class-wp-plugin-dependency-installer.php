@@ -20,8 +20,7 @@
  *  {
  *    "name": "WooCommerce",
  *    "slug": "woocommerce/woocommerce.php",
- *    "uri": "https://wordpress.org/plugins/woocommerce/",
- *    "required": true
+ *    "uri": "https://wordpress.org/plugins/woocommerce/"
  *  }
  * ]
  *
