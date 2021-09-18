@@ -46,11 +46,6 @@ $config = array(
 	),
 );
 
-
-// If only using JSON config.
-// \WP_Plugin_Dependency_Installer::instance(__DIR__)->run();
-
-// If using JSON config and/or configuration array.
 \WP_Plugin_Dependency_Installer::instance( __DIR__ )->register( $config )->run();
 
 // Use this filter to adjust the timeout for the dismissal. Default is 14 days.
