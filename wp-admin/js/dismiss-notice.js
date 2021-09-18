@@ -9,12 +9,12 @@
 	//shorthand for ready event.
 	$(
 		function () {
-			$('div[data-dismissible] button.notice-dismiss, div[data-dismissible] .dismiss-this').on('click',
+			$('div[data-dismissible] button.notice-dismiss').on('click',
 				function (event) {
 					event.preventDefault();
-					var $this = $(this);
+					let $this = $(this);
 
-					var attr_value, option_name, dismissible_length, dismissible_notice, data;
+					let attr_value, option_name, dismissible_length, dismissible_notice, data;
 
 					attr_value = $this.closest('div[data-dismissible]').attr('data-dismissible').split('-');
 

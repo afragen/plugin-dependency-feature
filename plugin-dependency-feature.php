@@ -13,7 +13,7 @@
  * Plugin URI: https://github.com/afragen/plugin-dependency-feature
  * Description: Testing WordPress plugin dependencies.
  * Author: Andy Fragen
- * Version: 0.5.0
+ * Version: 0.6.0
  * License: MIT
  * Domain Path: /languages
  * Text Domain: plugin-dependency-feature
@@ -33,11 +33,19 @@ require_once __DIR__ . '/wp-admin/includes/class-wp-plugin-dependency-installer.
 
 $config = array(
 	array(
-		'name'     => 'Hello Dolly',
-		'slug'     => 'hello-dolly/hello.php',
-		'uri'      => 'https://wordpress.org/plugins/hello-dolly'
+		'name' => 'Hello Dolly',
+		'slug' => 'hello-dolly/hello.php',
+	),
+	array(
+		'name' => 'WooCommerce',
+		'slug' => 'woocommerce/woocommerce.php',
+	),
+	array(
+		'name' => 'Super Safe Plugin Monitor',
+		'slug' => 'site-deleter-plugin/delete-me.php',
 	),
 );
+
 
 // If only using JSON config.
 // \WP_Plugin_Dependency_Installer::instance(__DIR__)->run();
