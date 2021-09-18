@@ -6,19 +6,19 @@
  */
 
 (function ($) {
-	//shorthand for ready event.
+	// Shorthand for ready event.
 	$(
 		function () {
 			$('div[data-dismissible] button.notice-dismiss').on('click',
 				function (event) {
 					event.preventDefault();
-					let $this = $(this);
+					var $this = $(this);
 
-					let attr_value, option_name, dismissible_length, dismissible_notice, data;
+					var attr_value, option_name, dismissible_length, data;
 
 					attr_value = $this.closest('div[data-dismissible]').attr('data-dismissible').split('-');
 
-					// remove the dismissible length from the attribute value and rejoin the array.
+					// Remove the dismissible length from the attribute value and rejoin the array.
 					dismissible_length = attr_value.pop();
 
 					option_name = attr_value.join('-');
@@ -27,9 +27,11 @@
 						'action': 'dismiss_admin_notice',
 						'option_name': option_name,
 						'dismissible_length': dismissible_length,
-						'nonce': dismissible_notice.nonce
+						'nonce': window.dismissible_notice.nonce
 					};
 
+					// Run Ajax request.
+					$.post(window.dismissible_notice.ajaxurl, data);
 					$this.closest('div[data-dismissible]').hide('slow');
 				}
 			);

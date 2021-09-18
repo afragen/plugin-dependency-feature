@@ -62,7 +62,8 @@ class WP_Dismiss_Notice {
 			'dismissible-notices',
 			'dismissible_notice',
 			array(
-				'nonce' => wp_create_nonce( 'dismissible-notice' ),
+				'nonce'   => wp_create_nonce( 'dismissible-notice' ),
+				'ajaxurl' => admin_url( 'admin-ajax.php' ),
 			)
 		);
 	}
