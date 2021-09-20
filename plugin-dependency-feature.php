@@ -13,7 +13,7 @@
  * Plugin URI: https://github.com/afragen/plugin-dependency-feature
  * Description: Testing WordPress plugin dependencies.
  * Author: Andy Fragen
- * Version: 0.7.0
+ * Version: 0.7.1
  * License: MIT
  * Domain Path: /languages
  * Text Domain: plugin-dependency-feature
