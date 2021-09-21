@@ -27,9 +27,6 @@
  *
  * Initialize: The command to initialize is as follows.
  *
- * Load the class.
- * require_once ABSPATH . 'wp-admin/includes/class-wp-plugin-dependency-installer.php';
- *
  * Load the configuration and run.
  * \WP_Plugin_Dependency_Installer::instance( __DIR__ )->register( $config )->run();
  *
@@ -93,7 +90,6 @@ class WP_Plugin_Dependency_Installer {
 	public function __construct() {
 		$this->config  = array();
 		$this->notices = array();
-		require_once 'class-wp-dismiss-notice.php';
 	}
 
 	/**
@@ -320,7 +316,7 @@ class WP_Plugin_Dependency_Installer {
 			return false;
 		}
 
-		require_once 'class-plugin-dependency-installer-skin.php';
+		require_once dirname(__DIR__) . '/wp-admin/includes/class-plugin-dependency-installer-skin.php';
 
 		$skin     = new WP_Plugin_Dependency_Installer_Skin(
 			array(

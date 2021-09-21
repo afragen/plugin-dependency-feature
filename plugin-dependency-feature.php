@@ -13,7 +13,7 @@
  * Plugin URI: https://github.com/afragen/plugin-dependency-feature
  * Description: Testing WordPress plugin dependencies.
  * Author: Andy Fragen
- * Version: 0.7.1
+ * Version: 0.8.0
  * License: MIT
  * Domain Path: /languages
  * Text Domain: plugin-dependency-feature
@@ -29,7 +29,8 @@ namespace Fragen\Plugin_Dependency_Feature;
 // require_once \ABSPATH . 'wp-admin/includes/class-wp-plugin-dependency-installer.php';
 
 // Use if patch has not been applied.
-require_once __DIR__ . '/wp-admin/includes/class-wp-plugin-dependency-installer.php';
+require_once __DIR__ . '/wp-includes/class-wp-plugin-dependency-installer.php';
+require_once __DIR__ . '/wp-admin/includes/class-wp-dismiss-notice.php';
 
 $config = array(
 	array(
