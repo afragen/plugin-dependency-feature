@@ -10,11 +10,6 @@
 
 /**
  * Class WP_Dismiss_Notice
- *
- * To initialize dismissible admin notices the following commands are needed.
- *
- * Load the class.
- * require_once ABSPATH . 'wp-admin/includes/class-wp-dismiss-notice.php';
  */
 class WP_Dismiss_Notice {
 
@@ -34,6 +29,8 @@ class WP_Dismiss_Notice {
 		if ( is_customize_preview() ) {
 			return;
 		}
+
+		// For core PR.
 		//wp_enqueue_script(
 		//	'dismissible-notices',
 		//	'/wp-admin/js/dismiss-notice.js',
